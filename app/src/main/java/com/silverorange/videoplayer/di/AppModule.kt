@@ -1,6 +1,8 @@
 package com.silverorange.videoplayer.di
 
 import com.silverorange.videoplayer.AppConsts
+import com.silverorange.videoplayer.data.videos.mappers.VideosInfoMapper
+import com.silverorange.videoplayer.data.videos.mappers.VideosInfoMapperImpl
 import com.silverorange.videoplayer.data.videos.remote.VideosApi
 import com.silverorange.videoplayer.data.videos.remote.VideosInfoRemoteDataSource
 import com.silverorange.videoplayer.data.videos.remote.VideosInfoRemoteDataSourceImpl
@@ -27,6 +29,10 @@ object AppModule {
     @Provides
     fun provideVideosRemoteDataSource(videosApi: VideosApi): VideosInfoRemoteDataSource =
         VideosInfoRemoteDataSourceImpl(videosApi)
+
+    @Singleton
+    @Provides
+    fun provideVideosInfoMapper(): VideosInfoMapper = VideosInfoMapperImpl()
 
     private fun prepareRetrofitConfiguration(): Retrofit {
         return Retrofit.Builder()
