@@ -1,7 +1,7 @@
 package com.silverorange.videoplayer.data.videos.dtos
 
 import com.google.gson.annotations.SerializedName
-import java.time.LocalDateTime
+import kotlinx.datetime.LocalDateTime
 
 data class VideoInfoDto(
     @SerializedName("id")
