@@ -44,7 +44,6 @@ class VideoPlayerViewModel @Inject constructor(
                 player.setMediaSources(mediaSources)
                 player.prepare()
                 player.addListener(this@VideoPlayerViewModel)
-                player.play()
             } catch (e: Exception) {
                 state = DataState.Error(e)
             }
