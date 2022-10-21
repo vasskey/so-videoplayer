@@ -27,7 +27,10 @@ class VideoPlayerViewModel @Inject constructor(
     var state by mutableStateOf<DataState<VideoInfo>>(DataState.Loading())
 
     init {
+        loadVideos()
+    }
 
+    fun loadVideos(){
         viewModelScope.launch {
             try {
                 availableVideos = videosInfoRepository.getAvailableVideosSortedByPublishedDate()

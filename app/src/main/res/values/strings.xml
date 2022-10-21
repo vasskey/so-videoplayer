@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Video Player</string>
+    <string name="oops_something_went_wrong">Oops… something went wrong. Try again later</string>
+    <string name="try_again_upper">TRY_AGAIN</string>
 </resources>
